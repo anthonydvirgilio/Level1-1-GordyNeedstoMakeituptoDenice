@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cw1qxcl14u33j"]
+
+[ext_resource type="Script" uid="uid://cp08jx2ef4dum" path="res://main_menu.gd" id="1_i26rj"]
+
+[node name="Control" type="Control" unique_id=1963333017]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 562.0
+offset_top = 286.0
+offset_right = 602.0
+offset_bottom = 326.0
+script = ExtResource("1_i26rj")
+
+[node name="MenuLayout" type="VBoxContainer" parent="." unique_id=1858484390]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameTitle" type="Label" parent="MenuLayout" unique_id=6036060]
+layout_mode = 2
+text = "Gordy Needs to Make it up to Denice"
+
+[node name="Instructions" type="Label" parent="MenuLayout" unique_id=373345114]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Gordy forgot his Anniversary and needs to make it up to Denice! Pick up 10 boxes of chocolate to make up for the mistake or she is leaving you!
+Controls: <-- , -->, Spacebar  to jump!"
+
+[node name="Start" type="Button" parent="MenuLayout" unique_id=654238119]
+layout_mode = 2
+text = "Game Start"

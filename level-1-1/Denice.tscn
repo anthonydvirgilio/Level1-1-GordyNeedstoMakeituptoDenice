@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dbjpfi57ski2a"]
+
+[ext_resource type="Texture2D" uid="uid://cpyaev4lwo1p3" path="res://My Assets/Denise.png" id="1_6gqgk"]
+[ext_resource type="Script" uid="uid://c1q5smnv8s1ch" path="res://denice.gd" id="1_wa6cu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(10, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(11, 15)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2113589566]
+script = ExtResource("1_wa6cu")
+
+[node name="Denise" type="Sprite2D" parent="." unique_id=2072371673]
+position = Vector2(8, -8)
+texture = ExtResource("1_6gqgk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=781806541]
+position = Vector2(10, -7)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="WinArea" type="Area2D" parent="." unique_id=1650926814]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea" unique_id=1671222829]
+position = Vector2(10, -7)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[connection signal="body_entered" from="WinArea" to="." method="_on_win_area_body_entered"]

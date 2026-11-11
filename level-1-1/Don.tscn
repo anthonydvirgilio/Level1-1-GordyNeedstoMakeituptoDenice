@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b01edqwmmg8ye"]
+
+[ext_resource type="Script" uid="uid://d2jmsfwdovce3" path="res://character_body_2d.gd" id="1_w2vvh"]
+[ext_resource type="Texture2D" uid="uid://72gspslo3cy3" path="res://My Assets/Don.png" id="2_63fia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(14, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(14, 13)
+
+[node name="Don" type="CharacterBody2D" unique_id=510749171]
+script = ExtResource("1_w2vvh")
+
+[node name="Don" type="Sprite2D" parent="." unique_id=299492702]
+position = Vector2(7, -8)
+texture = ExtResource("2_63fia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=487935015]
+position = Vector2(7, -6.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=2059064223]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1808333713]
+position = Vector2(7, -6.5)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

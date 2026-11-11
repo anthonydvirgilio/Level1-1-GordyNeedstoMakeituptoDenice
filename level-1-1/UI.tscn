@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dbuc5jgb868q"]
+
+[ext_resource type="Script" uid="uid://ctl5aepkkft84" path="res://ui.gd" id="1_b3bc3"]
+
+[node name="UserInterFace" type="CanvasLayer" unique_id=447690505]
+script = ExtResource("1_b3bc3")
+
+[node name="LayoutContainer" type="MarginContainer" parent="." unique_id=1250704123]
+offset_right = 191.0
+offset_bottom = 50.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="HeartCounter" type="Label" parent="LayoutContainer" unique_id=2145079870]
+layout_mode = 2
+text = "Hearts: 0"

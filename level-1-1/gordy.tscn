@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://celqwdyl20va2"]
+
+[ext_resource type="Script" uid="uid://bllofcfbd662s" path="res://gordy.gd" id="1_a3xat"]
+[ext_resource type="Texture2D" uid="uid://d0qvw12m076i6" path="res://My Assets/Gordy.png" id="2_2qlgk"]
+[ext_resource type="Script" uid="uid://bmgi2f5o23wsv" path="res://camera_2d.gd" id="3_2qlgk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(8, 14)
+
+[node name="Gordy" type="CharacterBody2D" unique_id=591133937]
+script = ExtResource("1_a3xat")
+
+[node name="Gordy" type="Sprite2D" parent="." unique_id=239057329]
+position = Vector2(3, -9)
+texture = ExtResource("2_2qlgk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=797955564]
+position = Vector2(5, -8)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=920640866]
+zoom = Vector2(2.34, 2.34)
+limit_left = 0
+limit_top = 11
+limit_right = 3216
+limit_bottom = -261
+script = ExtResource("3_2qlgk")
